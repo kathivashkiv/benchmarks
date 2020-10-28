@@ -12,11 +12,12 @@
     // The URL or local path of the source code repository for the
     // project being benchmarked
     "repo": "git@github.com:kathivashkiv/benchmarks",
+    //  "repo": "home/kate/benchmarks",
 
     // The Python project's subdirectory in your repo.  If missing or
     // the empty string, the project is assumed to be located at the root
     // of the repository.
-    // "repo_subdir": "",
+    "repo_subdir": "git@github.com:kathivashkiv/benchmarks",
 
     // Customizable commands for building, installing, and
     // uninstalling the project. See asv.conf.json documentation.
@@ -30,7 +31,7 @@
 
     // List of branches to benchmark. If not provided, defaults to "master"
     // (for git) or "default" (for mercurial).
-     "branches": ["master"], // for git
+     "branches": ["main"], // for git
     // "branches": ["default"],    // for mercurial
 
     // The DVCS being used.  If not set, it will be automatically
