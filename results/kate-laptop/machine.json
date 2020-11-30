@@ -1,0 +1,9 @@
+{
+    "arch": "x86_64",
+    "cpu": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+    "machine": "kate-laptop",
+    "num_cpu": "8",
+    "os": "Linux 5.4.0-39-generic",
+    "ram": "7915644",
+    "version": 1
+}
