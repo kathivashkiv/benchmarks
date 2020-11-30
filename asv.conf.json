@@ -4,20 +4,23 @@
     "version": 1,
 
     // The name of the project being benchmarked
-    "project": "project",
+    "project": "sunpy",
 
     // The project's homepage
-    "project_url": "http://project-homepage.org/",
+    "project_url": "http://sunpy.org/",
 
     // The URL or local path of the source code repository for the
     // project being benchmarked
-    "repo": "git@github.com:kathivashkiv/benchmarks",
+    //  "repo": "git@github.com:kathivashkiv/benchmarks",
     //  "repo": "home/kate/benchmarks",
+    "repo": "git@github.com:kathivashkiv/sunpy",
+    //   "repo": "home/kate/sunpy-git/",
 
     // The Python project's subdirectory in your repo.  If missing or
     // the empty string, the project is assumed to be located at the root
     // of the repository.
-    "repo_subdir": "git@github.com:kathivashkiv/benchmarks",
+    //"repo_subdir": "git@github.com:kathivashkiv/benchmarks",
+    "repo_subdir": "",
 
     // Customizable commands for building, installing, and
     // uninstalling the project. See asv.conf.json documentation.
@@ -31,7 +34,7 @@
 
     // List of branches to benchmark. If not provided, defaults to "master"
     // (for git) or "default" (for mercurial).
-     "branches": ["main"], // for git
+    "branches": ["asv-start"], // for git
     // "branches": ["default"],    // for mercurial
 
     // The DVCS being used.  If not set, it will be automatically
@@ -72,11 +75,13 @@
     // pip (with all the conda available packages installed first,
     // followed by the pip installed packages).
     //
-    // "matrix": {
+     "matrix": {
+         "extension-helpers": [],
+         "numpy":[],
     //     "numpy": ["1.6", "1.7"],
-    //     "six": ["", null],        // test with and without six installed
+         "six": [""],        // test with and without six installed
     //     "pip+emcee": [""],   // emcee is only available for install with pip.
-    // },
+     },
 
     // Combinations of libraries/python versions can be excluded/included
     // from the set to test. Each entry is a dictionary containing additional
