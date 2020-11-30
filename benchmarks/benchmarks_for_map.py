@@ -4,7 +4,6 @@
 import sunpy.data.sample
 import sunpy.map
 
-AIA_MAP = sunpy.data.sample.AIA_171_IMAGE
 class TimeSuite:
     """
     An example benchmark that times the performance of sunpy map
@@ -21,8 +20,8 @@ class MemSuite:
         return sunpy.map.Map(AIA_MAP)
 
 class PeakMemorySuite:
-    #def setup(self):
-    #    self._map = sunpy.data.sample.AIA_171_IMAGE
+    def setup(self):
+        self._map = sunpy.data.sample.AIA_171_IMAGE
 
     def peakmem_sunpy_map(self):
         aia_map = sunpy.map.Map(AIA_MAP)
