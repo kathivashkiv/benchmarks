@@ -16,12 +16,15 @@ class TimeSuite:
         aia_map = sunpy.map.Map(self._map)
 
 class MemSuite:
+    def setup(self):
+        self._map = sunpy.data.sample.AIA_171_IMAGE
+        
     def mem_sunpy_map(self):
-        return sunpy.map.Map(AIA_MAP)
+        return sunpy.map.Map(self._map)
 
 class PeakMemorySuite:
     def setup(self):
         self._map = sunpy.data.sample.AIA_171_IMAGE
 
     def peakmem_sunpy_map(self):
-        aia_map = sunpy.map.Map(AIA_MAP)
+        aia_map = sunpy.map.Map(self._map)
